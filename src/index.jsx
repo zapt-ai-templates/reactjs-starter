@@ -1,4 +1,5 @@
-import { render } from 'solid-js/web';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 import * as Sentry from '@sentry/browser';
@@ -23,4 +24,9 @@ if (!window.location.hostname.includes('vercel.app')) {
   document.head.appendChild(script);
 }
 
-render(() => <App />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);

@@ -1,1 +1,1 @@
-# solidjs-starter
+# reactjs-starter
