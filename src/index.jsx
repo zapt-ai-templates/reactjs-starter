@@ -7,6 +7,7 @@ import * as Sentry from '@sentry/browser';
 Sentry.init({
   dsn: import.meta.env.VITE_PUBLIC_SENTRY_DSN,
   environment: import.meta.env.VITE_PUBLIC_APP_ENV,
+  integrations: [Sentry.browserTracingIntegration()],
   initialScope: {
     tags: {
       type: 'frontend',
